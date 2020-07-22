@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h1>Teddy</h1>
+<button id = "random" onclick="rnd()">Care</button>
+<button id = "" onclick="change()">action</button>
+<p id="demo">number</p>
+<p id="error">comment</p>
+<script>
+function change() {
+    if (document.getElementById("demo").innerHTML==0) {
+		document.getElementById("demo").innerHTML = "moshe";
+    	document.getElementById("error").innerHTML = "";
+    }
+    else {
+    	document.getElementById("error").innerHTML = "wrong value";
+    }
+}
+function rnd() {
+	var num = Math.floor(Math.random() * 10);
+    if (num == 0) {
+        document.getElementById("demo").innerHTML = num;
+    }
+    else {
+        document.getElementById("demo").innerHTML = num;
+    }
+}
+</script>
+</body>
+</html>
