@@ -1,7 +1,11 @@
 <!DOCTYPE html>
 <html>
+<head>
+<title>Teddy</title>
+</head>
 <body>
-<h1>Teddy</h1>
+<h1 id="teddy">:|</h1>
+<h2>Teddy</h2>
 <button id = "random" onclick="rnd()">Care</button>
 <button id = "feed" onclick="change0()">Feed</button>
 <button id = "sleep" onclick="change1()">Sleep</button>
@@ -12,40 +16,49 @@
 function change0() {
     if (document.getElementById("number").innerHTML=="I'm hungry!") {
 		document.getElementById("number").innerHTML = "Thank you!";
-    	document.getElementById("error").innerHTML = "";
+    	document.getElementById("error").innerHTML = "Helpful!";
+		document.getElementById("teddy").innerHTML = ":)";
     }
     else {
     	document.getElementById("error").innerHTML = "Doesn't helpful!";
+		document.getElementById("teddy").innerHTML = ";(";
     }
 }
 function change1() {
     if (document.getElementById("number").innerHTML=="I'm tired!") {
 		document.getElementById("number").innerHTML = "Thank you!";
-    	document.getElementById("error").innerHTML = "";
+    	document.getElementById("error").innerHTML = "Helpful!";
+		document.getElementById("teddy").innerHTML = ":)";
     }
     else {
     	document.getElementById("error").innerHTML = "Doesn't helpful!";
+		document.getElementById("teddy").innerHTML = ";(";
     }
 }
 function change2() {
     if (document.getElementById("number").innerHTML=="I'm sad!") {
 		document.getElementById("number").innerHTML = "Thank you!";
-    	document.getElementById("error").innerHTML = "";
+    	document.getElementById("error").innerHTML = "Helpful!";
+		document.getElementById("teddy").innerHTML = ":)";
     }
     else {
     	document.getElementById("error").innerHTML = "Doesn't helpful!";
+		document.getElementById("teddy").innerHTML = ";(";
     }
 }
 function rnd() {
 	var num = Math.floor(Math.random() * 3);
     if (num == 0) {
         document.getElementById("number").innerHTML = "I'm hungry!";
+		document.getElementById("teddy").innerHTML = ":(";
     }
 	if (num == 1) {
         document.getElementById("number").innerHTML = "I'm tired!";
+		document.getElementById("teddy").innerHTML = ":(";
     }
 	if (num == 2) {
         document.getElementById("number").innerHTML = "I'm sad!";
+		document.getElementById("teddy").innerHTML = ":(";
     }
 	document.getElementById("error").innerHTML = "";
 }
