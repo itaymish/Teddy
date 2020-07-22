@@ -3,27 +3,51 @@
 <body>
 <h1>Teddy</h1>
 <button id = "random" onclick="rnd()">Care</button>
-<button id = "" onclick="change()">action</button>
-<p id="demo">number</p>
-<p id="error">comment</p>
+<button id = "feed" onclick="change0()">Feed</button>
+<button id = "sleep" onclick="change1()">Sleep</button>
+<button id = "play" onclick="change2()">Play</button>
+<p id="number"></p>
+<p id="error"></p>
 <script>
-function change() {
-    if (document.getElementById("demo").innerHTML==0) {
-		document.getElementById("demo").innerHTML = "moshe";
+function change0() {
+    if (document.getElementById("number").innerHTML=="I'm hungry!") {
+		document.getElementById("number").innerHTML = "Thank you!";
     	document.getElementById("error").innerHTML = "";
     }
     else {
-    	document.getElementById("error").innerHTML = "wrong value";
+    	document.getElementById("error").innerHTML = "Doesn't helpful!";
+    }
+}
+function change1() {
+    if (document.getElementById("number").innerHTML=="I'm tired!") {
+		document.getElementById("number").innerHTML = "Thank you!";
+    	document.getElementById("error").innerHTML = "";
+    }
+    else {
+    	document.getElementById("error").innerHTML = "Doesn't helpful!";
+    }
+}
+function change2() {
+    if (document.getElementById("number").innerHTML=="I'm sad!") {
+		document.getElementById("number").innerHTML = "Thank you!";
+    	document.getElementById("error").innerHTML = "";
+    }
+    else {
+    	document.getElementById("error").innerHTML = "Doesn't helpful!";
     }
 }
 function rnd() {
-	var num = Math.floor(Math.random() * 10);
+	var num = Math.floor(Math.random() * 3);
     if (num == 0) {
-        document.getElementById("demo").innerHTML = num;
+        document.getElementById("number").innerHTML = "I'm hungry!";
     }
-    else {
-        document.getElementById("demo").innerHTML = num;
+	if (num == 1) {
+        document.getElementById("number").innerHTML = "I'm tired!";
     }
+	if (num == 2) {
+        document.getElementById("number").innerHTML = "I'm sad!";
+    }
+	document.getElementById("error").innerHTML = "";
 }
 </script>
 </body>
